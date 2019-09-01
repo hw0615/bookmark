@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Header from '@/components/Header'
 import Main from '@/views/Main'
-import Bookmark from '@/views/Bookmark'
+import Bookmarks from '@/views/Bookmarks'
 
 Vue.use(Router)
 
@@ -18,11 +18,11 @@ export default new Router({
       }
     },
     {
-      path: '/bookmark',
-      name: 'Bookmark',
+      path: '/bookmarks',
+      name: 'Bookmarks',
       components: {
         header: Header,
-        default: Bookmark
+        default: Bookmarks
       }
     }
   ]

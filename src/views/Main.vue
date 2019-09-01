@@ -1,27 +1,17 @@
 <template>
   <div>
     <div class="wrapper">
-      <md-card class="header">1</md-card>
-      <md-card class="left">2</md-card>
-      <md-card class="right">3</md-card>
-      <md-card class="md-card5">4</md-card>
-      <md-card class="md-card6">5</md-card>
-      <md-card class="md-card7">6</md-card>
-      <md-card class="md-card8">7</md-card>
-      <md-card class="md-card8">8</md-card>
+      <md-card class="header"><img src="https://loremflickr.com/320/250?random=1" /></md-card>
+      <md-card class="left-row"><img src="https://loremflickr.com/320/500?random=2" /></md-card>
+      <md-card class="right-column"><img src="https://loremflickr.com/320/250?random=3" /></md-card>
+      <md-card><img src="https://loremflickr.com/320/250?random=4" /></md-card>
+      <md-card><img src="https://loremflickr.com/320/250?random=5" /></md-card>
+      <md-card><img src="https://loremflickr.com/320/250?random=6" /></md-card>
+      <md-card><img src="https://loremflickr.com/320/250?random=7" /></md-card>
+      <md-card class="right-row-column"><img src="https://loremflickr.com/320/250?random=8" /></md-card>
+      <md-card class="left-column"><img src="https://loremflickr.com/320/250?random=9" /></md-card>
+      <md-card class="footer"><img src="https://loremflickr.com/320/250?random=11" /></md-card>
     </div>
-    <md-dialog-content>
-      <md-dialog-prompt
-        :md-active.sync="active"
-        v-model="value"
-        md-title="What's your name?"
-        md-input-maxlength="30"
-        md-input-placeholder="Type your name..."
-        md-confirm-text="Done" />
-
-      <span v-if="value">Value: {{ value }}</span>
-    </md-dialog-content>
-      <md-button class="md-primary md-raised" @click="active = true">Prompt</md-button>
   </div>
 </template>
 
@@ -34,36 +24,46 @@ export default {
   }),
   methods: {
     toggleActive () {
-      console.log('gggggggggggg :');
       this.active = !this.active
     }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
 .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 200px 150px 150px 150px;
-  grid-gap: 5px;
-  div {
-    // background-color: orange;
-    // border: 1px black solid;
+  grid-template-rows: 300px 200px 200px 200px 200px 300px;
+  grid-gap: 10px;
+  object-fit: cover;
+  padding: 65px 10px 10px 10px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
   }
-  .header {
+  .header, .footer {
     grid-column-start: 1;
     grid-column-end: 4;
   }
-  .left {
+  .left-row {
     grid-row-start: 2;
     grid-row-end: 4;
   }
-  .right {
+  .right-row-column {
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 3;
+  }
+  .right-column {
     grid-column-start: 2;
     grid-column-end: 4;
+  }
+  .left-column {
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 }
 </style>
