@@ -65,7 +65,7 @@ export default {
     .nav-menu-wrap {
       position: fixed;
       z-index: 10100;
-      width: 45%;
+      width: 70%;
       height: 100vh;
       background-color: #fff;
     }
