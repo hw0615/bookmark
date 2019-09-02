@@ -43,7 +43,7 @@ export default {
   methods: {
     toggle () {
       this.$emit('toggleShowNav')
-      window.scrollTo(0,0)
+      // window.scrollTo(0,0)
     },
   }
 }

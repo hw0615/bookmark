@@ -22,6 +22,9 @@ export default {
     active: false,
     value: null
   }),
+  created () {
+    window.scrollTo(0,0)
+  },
   methods: {
     toggleActive () {
       this.active = !this.active

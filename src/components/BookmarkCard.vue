@@ -30,7 +30,6 @@ export default {
   },
   methods: {
     onDelte (id) {
-      console.log('id', id)
       this.$emit('delete', id)
     },
   }

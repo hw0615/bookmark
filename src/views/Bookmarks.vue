@@ -22,6 +22,7 @@ export default {
   name: 'Bookmark',
   components: { BookmarkCard, BookmarkCreateForm, Observer },
   created () {
+    window.scrollTo(0,0)
     this.fetchBookmarkList({ page: this.page, limit:this.limit })
   },
   data: () => ({
